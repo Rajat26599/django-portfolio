@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bonjour!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- STICKY SOCIAL MEDIA BAR -->
+
+    <div class="icon-bar" style="position: fixed; top: 50%; left:0%">
+      <a class="fa fa-facebook facebook" href="https://www.facebook.com/rajat.saxena.90410"></a>
+      <a class="fa fa-github github" href="https://github.com/Rajat26599"></a>
+      <a class="fa fa-linkedin linkedin" href="https://www.linkedin.com/in/rajat-saxena-54509a15b/"></a>
+      <a class="fa fa-quora quora" href="https://www.quora.com/profile/Rajat-Saxena-190"></a>
+    </div>
+
+  </body>
+</html>

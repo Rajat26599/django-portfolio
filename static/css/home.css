@@ -1,0 +1,112 @@
+body {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.navbar a {
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+}
+
+#name {
+  padding-top: 30px;
+  font-size: 120px;
+  font-weight: bold;
+  line-height: 90%;
+}
+
+.contact_top {
+  padding-left: 500px;
+  padding-bottom: 10px;
+}
+
+#github, #linkedin, #quora {
+  padding-left: 20px;
+}
+
+#subject {
+  height: 120px;
+  width: 450px;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+
+#iden {
+  font-size: 25px;
+  color: #bbbbbb;
+  padding-top: 10px;
+}
+
+#inp {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+
+#fbdown, #githubdown, #quoradown, #linkedindown {
+  height: 50px;
+  width: 50px;
+}
+
+#githubdown {
+  background-color: white;
+  position: sticky;
+}
+
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.github {
+  background: #444444;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.quora {
+  background: #bb0000;
+  color: white;
+}
+
+/* PROGRESS */
+
+.progress-bar {
+  width: 25%;
+}

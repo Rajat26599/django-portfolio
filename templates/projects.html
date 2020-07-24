@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Check out my work!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+  </head>
+
+  <body>
+    <div class='projects'>
+      <h1 id="projects">MY PROJECTS</h1><br>
+      <table>
+          <tr>
+            <td id="col1">
+              <a href="https://github.com/Rajat26599/HealthForever" target="_blank"><img id="img" src="{% static 'images/healthforever.jpg' %}" width=250px height=250px border=10px alt=""></a>
+            </td>
+
+            <td id="col2">
+              <a href="https://github.com/Rajat26599/BlackJack" target="_blank"><img id="img" src="{% static 'images/blackjack.png' %}" width=250px height=250px border=10px alt=""></a>
+            </td>
+
+            <td id="col3">
+              <a href="https://drive.google.com/drive/folders/1VRwpv21r_FM3HZt0udXiKneiZ5BJeLEc?usp=sharing" target="_blank"><img id="img" src="{% static 'images/waterlevel.png' %}" width=250px height=250px border=10px alt=""></a>
+            </td>
+
+            <td id="col4">
+              <a href="https://github.com/Rajat26599/corona_tracker" target="_blank"><img id="img" src="{% static 'images/coronatracker.jpg' %}" width=250px height=250px border=10px alt=""></a>
+            </td>
+
+          </tr>
+
+          <tr>
+            <td id="healthfor">
+              <button type="button" class="btn btn-light" id="firstbutton"><a href="https://github.com/Rajat26599/HealthForever" target="_blank">HEALTHFOREVER</a></button>
+            </td>
+
+            <td id="blackj">
+                <button type="button" class="btn btn-light" id="secondbutton"><a id="black" href="https://github.com/Rajat26599/BlackJack" target="_blank">BLACKJACK</a></button>
+            </td>
+
+            <td id="col">
+              <button type="button" class="btn btn-light" id="thirdbutton"><a id="water" href="https://drive.google.com/drive/folders/1VRwpv21r_FM3HZt0udXiKneiZ5BJeLEc?usp=sharing" target="_blank">WATER LEVEL INDICATOR & NOTIFIER</a></button>
+            </td>
+
+            <td id="coronatrack">
+              <button type="button" class="btn btn-light" id="forthbutton"><a href="https://github.com/Rajat26599/corona_tracker" target="_blank">CORONA TRACKER</a></button>
+            </td>
+
+          </tr>
+
+      </table>
+    </div>
+
+    <div class='other'>
+      <br><br>
+      <h1 id="other">Check out these too!</h1><br>
+      <table>
+          <tr>
+            <td id="col1">
+              <a href="https://drive.google.com/file/d/1peUvY2ZHKjcniGHkt5hEZIKB1SuUin0J/view?usp=sharing" target="_blank"><img id="img" src="{% static 'images/snake.jpg' %}" width=250px height=250px border=10px alt=""></a>
+            </td>
+          </tr>
+
+        <tr>
+          <td id="snakebtn">
+            <button type="button" class="btn btn-light" id="snakebutton"><a href="https://drive.google.com/file/d/1peUvY2ZHKjcniGHkt5hEZIKB1SuUin0J/view?usp=sharing" target="_blank">SNAKE GAME</a></button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

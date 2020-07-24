@@ -1,0 +1,12 @@
+body {
+  width: 1300px;
+  height: 580px;
+}
+
+.col {
+  align-content: center;
+  padding-top: 50px;
+  padding-left: 100px;
+  width: 700px;
+  height: 100px;
+}

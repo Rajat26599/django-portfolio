@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+<style>
+  body {
+    background-image: url("{% static 'images./portfolio_bg.jpg' %}");
+  }
+</style>
+
+
+<div class="container-fluid">
+
+  <!-- WHITE ZONE -->
+
+  <div class="top-right-bg" style="background-color: rgba(255, 255, 255, 0.5); width:50%; position:relative; left: 50%">
+
+    <!-- SOCIAL MEDIA TOP -->
+
+    <div class="row contact_top">
+      <a id="fb" href="https://www.facebook.com/rajat.saxena.90410"><img src="{% static 'images/circlefb-logo.png' %}" width=20px height=20px/></a>
+      <a id="linkedin" href="https://www.linkedin.com/in/rajat-saxena-54509a15b/"><img src="{% static 'images/linkedin-logo.png' %}" width=18px height=18px/></a>
+      <a id="github" href="https://github.com/Rajat26599"><img src="{% static 'images/github-logo.png' %}" width=20px height=20px/></a>
+      <a id="quora" href="https://www.quora.com/profile/Rajat-Saxena-190"><img src="{% static 'images/quora-logo.png' %}" width=20px height=20px/></a>
+    </div>
+
+    <!-- NAVBAR -->
+
+    <nav class="row navbar bg-light">
+      <button type="button" class="btn btn-light" id="firstdbutton"><a href="{% url 'index' %}"><img src="{% static 'images/my_name_logo_cropped.png' %}" height=20px/></a></button>
+      <button type="button" class="btn btn-light" id="secondbutton"><a href="#">WORK & EXPERIENCE</a></button>
+      <button type="button" class="btn btn-light" id="thirdbutton"><a href="{% url 'homepage_app:projects' %}">PROJECTS</a></button>
+      <button type="button" class="btn btn-light" id="forthbutton"><a href="https://drive.google.com/file/d/1iuV3z54lLjck9CynkKSc4qhCKKOO8wq5/view?usp=sharing" target="_blank">CV</a></button>
+      <button type="button" class="btn btn-light" id="fifthbutton"><a href="https://drive.google.com/file/d/1sWlEfWp7b6KKT0M3RCMIMSLI0JxOBl8p/view?usp=sharing" target="_blank">RESUME</a></button>
+    </nav>
+
+    <div class="about_me container">
+      <p id="name">RAJAT SAXENA</p><br>
+      <h2>ABOUT ME</h2>
+      <p style="font-size:20px"><i>I'm a Full-Stack Web Developer from India. Being an experienced Graphic Designer adds a flavour in my personality.</i></p>
+      <p>I design thaoghtful, easy-to-use, and of course products with beautiful digital experience. I believe in designs that surpass common obstacles and make things easier for the user.<br>I have a personal philosophy in life: if somebody else can do something that I'm doing, they should do it. And what I want to do is to find things that would represent a unique contribution to the world - the contribution that only I, my portfolio of talents can make happen. Those are my priorities in life.</p>
+    </div>
+
+    <!-- PROGRESS BARS -->
+
+
+    <div class="skills">
+      <div class="progrss-left-panel container" style="background-color: rgba(255, 255, 255, 0.5); width:50%; float:left; margin-top:-16px; padding-top:20px; padding-bottom:30px">
+        {% for skill in skills1 %}
+        <p style="margin:10px"><span><b>{{skill.name}}</b></span>
+          <span><img src="{{skill.icon_file}}{{skill.icon_url}}" height="20px"alt="PYTHON ICON"></span></p>
+
+        <div class="progress" style="height:6px; width:90%">
+          {% if skill.value > 0 and skill.value <= 50 %}
+          <div class="progress-bar bg-warning" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% elif skill.value > 50 and skill.value <= 70 %}
+          <div class="progress-bar bg-success" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% elif skill.value > 70 and skill.value <= 80 %}
+          <div class="progress-bar bg-info" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% elif skill.value > 80 %}
+          <div class="progress-bar bg-danger" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% else %}
+          <p>Not Disclosed</p>
+          {% endif %}
+        </div>
+
+        {% endfor %}
+
+
+      </div>
+
+      <div class="progrss-right-panel container" style="background-color: rgba(255, 255, 255, 0.5); width:50%; float:right; margin-top:-16px; padding-top:20px">
+        {% for skill in skills2 %}
+        <p style="margin:10px"><span><b>{{skill.name}}</b></span>
+          <span><img src="{{skill.icon_file}}{{skill.icon_url}}" height="20px"alt="PYTHON ICON"></span></p>
+
+        <div class="progress" style="height:6px; width:90%">
+          {% if skill.value > 0 and skill.value <= 50 %}
+          <div class="progress-bar bg-warning" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% elif skill.value > 50 and skill.value <= 70 %}
+          <div class="progress-bar bg-info" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% elif skill.value > 70 and skill.value <= 80 %}
+          <div class="progress-bar bg-success" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% elif skill.value > 80 %}
+          <div class="progress-bar bg-danger" role="progressbar" style="width: {{skill.value}}%" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% else %}
+          <p>Not Disclosed</p>
+          {% endif %}
+        </div>
+
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+<!-- Black ZONE -->
+
+<div class="footer" style="background-color:rgba(0,0,0,0.8); color:white; clear:both">
+  <div class="container">
+    <div class="contact-form" style="padding-top:10px; display:block; margin-left:50%">
+      <h1>CONTACT ME</h1><br>
+
+      <form action="mailto:saxena1975sanjeev@gmail.com" method="post" enctype="text/plain">
+
+        <p id='iden'>NAME :</p>
+        <input id="inp" type="text" name="name"><br>
+
+        <p id='iden'>E-MAIL :</p>
+        <input id="inp" type="email" name="mail"><br>
+
+        <p id='iden'>COMMENT :</p>
+        <p></p>
+        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+        <br><br>
+        <input id="inp" type="submit" value="Send">
+        <input id="inp" type="reset" value="Reset"><br><br><br>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
