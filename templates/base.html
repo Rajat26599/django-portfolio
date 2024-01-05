@@ -4,23 +4,78 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bonjour!</title>
+
+    <!-- BOOTSTAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/projects.css' %}"> -->
   </head>
   <body>
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+
+    <div class="footer" style="background-color:rgba(0,0,0,0.8); color:white; height:600px;clear:both; display:block;">
+      <div class="container">
+        <div class="contact-form col-md-7" style="padding-top:10px; display:block; float:right;">
+          <h1>CONTACT ME</h1><br>
+
+          <form action="mailto:saxena1975sanjeev@gmail.com" method="post" enctype="text/plain">
+
+            <p id='iden'>NAME :</p>
+            <input id="inp" type="text" name="name"><br>
+
+            <p id='iden'>E-MAIL :</p>
+            <input id="inp" type="email" name="mail"><br>
+
+            <p id='iden'>COMMENT :</p>
+            <p></p>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+            <br><br>
+            <input id="inp" type="submit" value="Send">
+            <input id="inp" type="reset" value="Reset"><br><br><br>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="" style="text-align: center;clear:both">
+        <p>Copyright <i class="fa fa-copyright"></i> 2020 | Rajat-Portfolio | All rights reserved</p>
+      </div>
+
+    </div>
+
     <!-- STICKY SOCIAL MEDIA BAR -->
 
     <div class="icon-bar" style="position: fixed; top: 50%; left:0%">
       <a class="fa fa-facebook facebook" href="https://www.facebook.com/rajat.saxena.90410"></a>
+      <a class="fa fa-twitter twitter" href="https://twitter.com/SilverCybr" target="_blank"></a>
       <a class="fa fa-github github" href="https://github.com/Rajat26599"></a>
       <a class="fa fa-linkedin linkedin" href="https://www.linkedin.com/in/rajat-saxena-54509a15b/"></a>
-      <a class="fa fa-quora quora" href="https://www.quora.com/profile/Rajat-Saxena-190"></a>
     </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <!-- CUSTOM SCRIPT -->
+    <script type="text/javascript" src="{% static 'js/master.js' %}"></script>
 
   </body>
 </html>

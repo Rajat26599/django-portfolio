@@ -1,0 +1,28 @@
+{% load static %}
+
+<nav class="row navbar navbar-expand-lg bg-light">
+  <button type="button" class="nav-brand btn btn-light"><a id="NameBtn" href="{% url 'index' %}"><img src="{% static 'images/my_name_logo_cropped.png' %}" height=22px/></a></button>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="nav_expand">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-nav mr-auto">
+      <button type="button" class="nav-item btn btn-light"><a id="WorkBtn" href="#">WORK & EXPERIENCE</a></button>
+      <button type="button" class="nav-item btn btn-light"><a id="SuperPowersBtn" href="#skillSection">SUPERPOWERS</a></button>
+      <button type="button" class="nav-item btn btn-light"><a id="ProjectsBtn" href="{% url 'homepage_app:projects' %}">PROJECTS</a></button>
+      <button type="button" class="nav-item btn btn-light"><a id="BlogBtn" href="https://silvercyberblog.pythonanywhere.com">BLOG</a></button>
+      <!-- <button type="button" class="btn btn-light" id=""><a href="https://drive.google.com/file/d/17uOLVacPaxlAJtl4Rxo5w0clLVQBq080/view?usp=sharing" target="_blank">CV</a></button> -->
+      <div class="nav-item dropdown">
+        <button type="button" class="btn btn-light dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a id="ResumeBtn" href="#">RESUME</a></button>
+        <div class="dropdown-menu  dropdown-menu-right">
+          <a class="dropdown-item" href="https://drive.google.com/file/d/1QxhGaAFgf2ytKzpbzTJfuBAB3CKlQ_ok/view?usp=sharing" target="_blank">One Page Resume</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://drive.google.com/file/d/17uOLVacPaxlAJtl4Rxo5w0clLVQBq080/view?usp=sharing" target="_blank">Detailed Resume</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,14 +1,44 @@
+/* * {
+  border: 1px solid red;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-size: cover;
   background-attachment: fixed;
 }
 
-.navbar a {
-  font-size: 20px;
+.top-right-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#sep {
+  display: none;
+}
+
+/* NAVBAR */
+
+#WorkBtn, #ProjectsBtn, #SuperPowersBtn, #BlogBtn, #ResumeBtn {
+  font-size: 17px;
   font-weight: bold;
   color: grey;
   text-decoration: none;
+  margin-left: 2px;
 }
+
+#ResumeDropDown {
+  display: none;
+}
+
+.dropdown-menu {
+  font-family: 'Work Sans', sans-serif;
+  font-size:15px;
+  font-weight: normal;
+}
+
 
 #name {
   padding-top: 30px;
@@ -18,12 +48,47 @@ body {
 }
 
 .contact_top {
-  padding-left: 500px;
-  padding-bottom: 10px;
+  padding: 10px 0px 10px 620px;
 }
 
 #github, #linkedin, #quora {
   padding-left: 20px;
+}
+
+.workSide, .superPowSide, .projectSide {
+  height: 30px;
+  /* border-top:1px;
+  border-left:1px;
+  border-right:1px; */
+  background-color: #eeeeee;
+  position: fixed;
+  text-align: center;
+  transform: rotate(-90deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.workSide {
+  top: 150px;
+  width: 110px;
+  right: -40px;
+}
+.superPowSide {
+  top: 300px;
+  width: 120px;
+  right: -45px;
+}
+.projectSide {
+  top: 450px;
+  width: 100px;
+  right: -35px;
+}
+
+.workSide:hover, .superPowSide:hover, .projectSide:hover{
+  background-color: white;
+}
+
+.fixedSide p {
+  font-family: Montserrat;
+  color: black;
 }
 
 #subject {
@@ -100,13 +165,69 @@ body {
   color: white;
 }
 
-.quora {
-  background: #bb0000;
-  color: white;
+
+/* PROJECTS STYLING */
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-/* PROGRESS */
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-.progress-bar {
-  width: 25%;
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.projectImg {
+  max-width: 100%;
+  background: green;
+}
+
+#health-img {
+  object-fit: contain;
+}
+
+
+/* STYLING FOR MOBILE */
+
+@media screen and (max-width:800px) {
+
+  body {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .top-right-bg {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #sep {
+    display: block;
+    margin: auto;
+    padding: 10px;
+  }
+
+  /* .navbar {
+    position: fixed;
+    top:0;
+    width: 100vw;
+  } */
+
+  .navbar, .contact_top, #AboutHeading {
+    display: none;
+  }
+
+  #name {
+    font-size: 80px;
+  }
+
+  #subject {
+    width: 200px;
+  }
 }
